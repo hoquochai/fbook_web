@@ -36,16 +36,10 @@
                                         <a href="/users/profile"> <span><i class="icofont icofont-user"></i></span> Profile</a>
                                     </li>
                                     <li>
-                                        <a href="#"> <span><i class="icofont icofont-notification"></i></span> Notifications</a>
-                                    </li>
-                                    <li>
                                         <a href="/books/add"> <span><i class="glyphicon glyphicon-share-alt"></i></span> Share books </a>
                                     </li>
                                     <li>
                                         <a href="/books/waiting_approve"> <span><i class="glyphicon glyphicon-ok"></i></span> Approve requests </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"> <span><i class="icofont icofont-read-book"></i></span> My Books</a>
                                     </li>
                                     <li>
                                         <a href="/logout"> <span><i class="icofont icofont-logout"></i></span> Log Out</a>
@@ -82,7 +76,17 @@
                         <% } %>
                         <% if (typeof user != 'undefined' && typeof user.name !== 'undefined' && user.name) { %>
                             <li>
-                                <a href="#"><%= user.name %></a>
+                                <a href="#" class="dropdown-toggle opacity-0" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Notification <span class="badge">5</span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/home" class="office-dropdow-a">All</a></li>
+                                    <li><a href="/home" class="office-dropdow-a">All All All All All All</a></li>
+                                    <li><a href="/home" class="office-dropdow-a"> All All All All All All All All All All</a></li>
+                                    <li><a href="/home" class="office-dropdow-a"> All All All All All All All All All All</a></li>
+                                    <li><a href="/home" class="office-dropdow-a"> All All All All All All All All All All All All All All All All All All </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"><%= user.name %></a>
                             </li>
                         <% }
                         else { %>
